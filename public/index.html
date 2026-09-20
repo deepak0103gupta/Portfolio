@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Deepak Gupta is a full stack developer who builds secure APIs and event-driven backends with Java, Spring Boot, Kafka and Angular.">
+<title>Deepak Gupta | Full stack developer</title>
+<link rel="canonical" href="https://deepakgupta-portfolio.vercel.app/">
+<meta name="theme-color" content="#2333e8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deepak Gupta">
+<meta property="og:title" content="Deepak Gupta | Full stack developer">
+<meta property="og:description" content="Java, Spring Boot, Kafka and Angular. I build secure APIs and event-driven backends.">
+<meta property="og:url" content="https://deepakgupta-portfolio.vercel.app/">
+<meta property="og:image" content="https://deepakgupta-portfolio.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Deepak Gupta","jobTitle":"Full Stack Developer","worksFor":{"@type":"Organization","name":"LTIMindtree"},"url":"https://deepakgupta-portfolio.vercel.app/","address":{"@type":"PostalAddress","addressLocality":"Pune","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/deepak0103/","https://github.com/deepak0103gupta"],"knowsAbout":["Java","Spring Boot","Apache Kafka","Angular","Microservices","REST APIs"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --hero: #2333e8;
+    --hero-deep: #1a27c2;
+    --amber: #ffc53d;
+    --paper: #f3f5fb;
+    --band: #e8ecf7;
+    --ink: #0f1533;
+    --soft: #48507a;
+    --rule: #d3d9ee;
+    --link: #2333e8;
+
+    --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --hero: #1c29cf;
+      --hero-deep: #141fa6;
+      --paper: #0b1030;
+      --band: #111842;
+      --ink: #eaedff;
+      --soft: #a3abd3;
+      --rule: #232c63;
+      --link: #97a3ff;
+    }
+  }
+  :root[data-theme="dark"] {
+    --hero: #1c29cf;
+    --hero-deep: #141fa6;
+    --paper: #0b1030;
+    --band: #111842;
+    --ink: #eaedff;
+    --soft: #a3abd3;
+    --rule: #232c63;
+    --link: #97a3ff;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 72px); scroll-behavior: smooth; background: var(--hero); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 17px/1.65 var(--body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+  .skip { position: absolute; left: 12px; top: -60px; background: var(--amber); color: #0f1533; padding: 10px 14px; z-index: 50; border-radius: 3px; }
+  .skip:focus { top: calc(env(safe-area-inset-top, 0px) + 10px); }
+
+  h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; }
+  h2 { font-size: clamp(32px, 4.6vw, 54px); font-weight: 760; font-stretch: 112%; font-variation-settings: "wdth" 112; letter-spacing: -0.01em; }
+  h3 { font-size: 24px; font-weight: 700; font-variation-settings: "wdth" 108; line-height: 1.15; }
+  p { margin: 0 0 1em; max-width: 64ch; }
+
+  /* ---------- Navigation ---------- */
+  .nav {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
+    height: 68px; margin-bottom: -68px;
+    color: #fff; border-bottom: 1px solid transparent;
+    transition: background-color .2s, color .2s, border-color .2s;
+  }
+  .nav.solid { background: var(--paper); color: var(--ink); border-bottom-color: var(--rule); }
+  .nav-in { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+  .mark {
+    font: 800 15px/1 var(--display); font-variation-settings: "wdth" 125; letter-spacing: .02em;
+    color: inherit; text-decoration: none; border: 1.5px solid currentColor; padding: 9px 10px 8px; border-radius: 2px;
+  }
+  .nav nav { display: flex; gap: 26px; }
+  .nav nav a { color: inherit; text-decoration: none; font-size: 15px; font-weight: 500; padding: 6px 0; border-bottom: 1.5px solid transparent; }
+  .nav nav a:hover { border-bottom-color: currentColor; }
+  .nav nav { align-items: center; }
+  .nav nav a[aria-current="true"] { border-bottom-color: currentColor; }
+  .nav nav a.nav-resume { border: 1.5px solid currentColor; border-radius: 3px; padding: 7px 12px; }
+  .nav nav a.nav-resume:hover { background: color-mix(in srgb, currentColor 14%, transparent); }
+  @media (max-width: 640px) { .nav nav { gap: 14px; } .nav nav a { font-size: 14px; } .nav nav a:nth-child(-n+2) { display: none; } .nav nav a.nav-resume { padding: 6px 10px; } }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    background-color: var(--hero);
+    background-image:
+      linear-gradient(rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.075) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-position: -1px -1px;
+    color: #fff;
+    padding: 132px 0 72px;
+  }
+  .hero-in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; }
+  h1 {
+    font-size: clamp(44px, 6vw, 88px); font-weight: 800; font-variation-settings: "wdth" 125;
+    line-height: .92; letter-spacing: -0.02em; margin-bottom: 28px;
+  }
+  h1 span { display: block; }
+  .lede { font-size: clamp(18px, 1.7vw, 21px); line-height: 1.55; color: rgba(255,255,255,.92); max-width: 30em; margin-bottom: 32px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; font: 600 16px/1 var(--body); padding: 15px 22px; border-radius: 3px; text-decoration: none;
+    border: 1.5px solid transparent; cursor: pointer; transition: background-color .15s, color .15s, border-color .15s;
+  }
+  .btn-amber { background: var(--amber); color: #0f1533; }
+  .btn-amber:hover { background: #ffd56b; }
+  .btn-line { border-color: rgba(255,255,255,.7); color: #fff; background: transparent; }
+  .btn-line:hover { background: rgba(255,255,255,.14); border-color: #fff; }
+  .btn-ink { background: var(--ink); color: var(--paper); }
+  .btn-ink:hover { opacity: .88; }
+
+  @media (max-width: 980px) {
+    h1 { font-size: clamp(56px, 13vw, 112px); }
+    .hero { padding-top: 116px; }
+    .hero-in { grid-template-columns: 1fr; gap: 44px; }
+  }
+
+  /* ---------- Stage (interactive diagram) ---------- */
+  .stage { border: 1.5px solid rgba(255,255,255,.55); border-radius: 4px; background: rgba(9, 14, 110, .42); min-width: 0; }
+  .stage-bar { padding: 18px 20px 6px; display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; justify-content: space-between; }
+  .stage-title { margin: 0; font: 600 16px/1.35 var(--body); max-width: 28em; }
+  .stage-title small { display: block; font-weight: 400; font-size: 14px; color: rgba(255,255,255,.78); margin-top: 2px; }
+  .stage-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .stage-actions .btn { padding: 11px 16px; font-size: 14.5px; }
+  .stage-actions .btn[disabled] { opacity: .5; cursor: progress; }
+  .diagram-scroll { overflow-x: auto; padding: 4px 12px 0; }
+  .dgm { display: block; width: 100%; height: auto; }
+  .dgm.dw { min-width: 560px; }
+  .dgm.dn { display: none; }
+  @media (max-width: 640px) { .dgm.dw { display: none; } .dgm.dn { display: block; max-width: 420px; margin-inline: auto; } }
+
+  .edge { fill: none; stroke: rgba(255,255,255,.5); stroke-width: 1.5; transition: stroke .2s, stroke-width .2s; }
+  .edge.live { stroke: var(--amber); stroke-width: 2.6; }
+  .node rect { fill: rgba(255,255,255,.07); stroke: #fff; stroke-width: 1.5; transition: fill .2s, stroke .2s; }
+  .node.planned rect { stroke-dasharray: 6 5; }
+  .node.active rect { fill: rgba(255,197,61,.2); stroke: var(--amber); stroke-width: 2.4; }
+  .nl { font: 500 15px var(--body); fill: #fff; }
+  .ns { font: 400 11.5px var(--mono); fill: rgba(255,255,255,.75); }
+  .elabel { font: 400 11px var(--mono); fill: rgba(255,255,255,.7); }
+  .packet { fill: var(--amber); stroke: #fff; stroke-width: 1.5; opacity: 0; }
+
+  .log { list-style: none; margin: 0; padding: 10px 20px 4px; min-height: 262px; border-top: 1px solid rgba(255,255,255,.25); font: 400 13px/1.5 var(--mono); }
+  .log li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 4px 0; animation: logIn .25s ease-out; }
+  .log .svc { color: var(--amber); }
+  .log .msg { color: rgba(255,255,255,.92); }
+  .log .idle { display: block; color: rgba(255,255,255,.7); }
+  @keyframes logIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .log li { animation: none; } }
+  @media (max-width: 520px) { .log li { grid-template-columns: 1fr; gap: 0; } .log { min-height: 300px; } }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 8px 20px 18px; font-size: 13px; color: rgba(255,255,255,.8); max-width: none; }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .key { width: 22px; height: 12px; border: 1.5px solid #fff; display: inline-block; }
+  .key.solid { border-radius: 2px; }
+  .key.dashed { border-style: dashed; border-radius: 2px; }
+  .key.pill { border-radius: 8px; }
+
+  /* ---------- Sections ---------- */
+  section.block { padding: 104px 0; }
+  section.band { background: var(--band); }
+  .split { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 56px; }
+  @media (max-width: 860px) { .split { grid-template-columns: 1fr; gap: 32px; } section.block { padding: 72px 0; } }
+
+  /* About */
+  .about-copy p { font-size: 19px; }
+  .stack { margin: 40px 0 0; border-top: 1px solid var(--rule); }
+  .stack div { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .stack dt { font-weight: 600; }
+  .stack dd { margin: 0; color: var(--soft); }
+  @media (max-width: 560px) { .stack div { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* Experience */
+  .role h3 { margin-bottom: 6px; }
+  .role p { margin: 0 0 2px; color: var(--soft); }
+  .role .where { color: var(--ink); font-weight: 500; }
+  .work { list-style: none; margin: 0; padding: 0; }
+  .work li { padding: 0 0 28px; margin: 0 0 28px; border-bottom: 1px solid var(--rule); }
+  .work li:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+  .work strong { display: block; font: 700 20px/1.3 var(--display); font-variation-settings: "wdth" 106; margin-bottom: 6px; }
+  .work p { margin: 0; }
+  .earlier { margin-top: 72px; }
+  .earlier h3 { margin-bottom: 20px; }
+  .rows { border-top: 1px solid var(--rule); }
+  .row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 56px; padding: 22px 0; border-bottom: 1px solid var(--rule); }
+  .row h4 { margin: 0 0 4px; font: 600 17px/1.4 var(--body); }
+  .row .meta { margin: 0; color: var(--soft); font-size: 15px; }
+  .row p:last-child { margin: 0; }
+  @media (max-width: 860px) { .row { grid-template-columns: 1fr; gap: 8px; } }
+
+  /* Projects */
+  .projects-head { margin-bottom: 56px; }
+  .project { padding: 56px 0; border-top: 1.5px solid var(--ink); }
+  .project:first-of-type { margin-top: 0; }
+  .project h3 { font-size: clamp(30px, 3.6vw, 42px); font-variation-settings: "wdth" 116; font-weight: 780; margin-bottom: 8px; }
+  .project .sub { color: var(--soft); margin: 0 0 14px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  .status i { width: 12px; height: 12px; border: 1.5px dashed var(--ink); border-radius: 2px; display: inline-block; }
+  .project .lead { font-size: 19px; }
+  .services { list-style: none; margin: 28px 0; padding: 0; border-top: 1px solid var(--rule); }
+  .services li { display: grid; grid-template-columns: 14px 250px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+  .services i { width: 12px; height: 12px; border: 1.5px solid var(--ink); background: var(--ink); border-radius: 2px; align-self: start; margin-top: 8px; }
+  .services i.todo { background: transparent; border-style: dashed; }
+  .services b { font-weight: 600; }
+  .services code { font: 400 13px var(--mono); color: var(--soft); margin-left: 6px; }
+  .services span { color: var(--soft); }
+  @media (max-width: 640px) { .services li { grid-template-columns: 14px 1fr; } .services li span { grid-column: 2; } }
+  .points { margin: 24px 0; padding-left: 1.1em; }
+  .points li { margin-bottom: 10px; max-width: 64ch; }
+  .tech { color: var(--soft); font-size: 15.5px; }
+  .tech b { color: var(--ink); font-weight: 600; }
+  .plink { display: inline-block; margin-top: 8px; font-weight: 600; }
+
+  /* Contact */
+  .contact { background: var(--hero); color: #fff; padding: 104px 0 56px; background-image: linear-gradient(rgba(255,255,255,.075) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.075) 1px, transparent 1px); background-size: 56px 56px; background-position: -1px -1px; }
+  .contact-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 64px; align-items: start; }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } .contact { padding-top: 72px; } }
+  .contact h2 { font-size: clamp(40px, 7vw, 92px); font-variation-settings: "wdth" 125; font-weight: 800; line-height: .95; margin-bottom: 28px; }
+  .contact p { font-size: 20px; max-width: 34em; color: rgba(255,255,255,.92); }
+  .contact a:not(.btn) { color: #fff; }
+  .reach { margin: 32px 0 30px; border-top: 1px solid rgba(255,255,255,.35); }
+  .reach > div { display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; gap: 16px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.35); align-items: baseline; }
+  .reach dt { color: rgba(255,255,255,.78); font-size: 15px; }
+  .reach dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+  @media (max-width: 560px) {
+    .reach > div { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; padding: 12px 0; }
+    .reach dt { grid-column: 1 / -1; font-size: 14px; }
+    .reach dd { font-size: 16.5px; }
+    .form { padding: 22px 18px; }
+  }
+  .linkbtn { background: none; border: 0; padding: 2px 0; color: #fff; font: 500 14px var(--body); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .form { border: 1.5px solid rgba(255,255,255,.55); border-radius: 4px; background: rgba(9, 14, 110, .42); padding: 28px; }
+  .form h3 { font-size: 26px; color: #fff; margin-bottom: 6px; }
+  .form label { display: block; font-weight: 500; font-size: 15px; margin: 18px 0 6px; }
+  .form input[type="text"], .form input[type="email"], .form textarea {
+    width: 100%; font: 400 16px/1.5 var(--body); color: #fff; background: rgba(255,255,255,.08);
+    border: 1.5px solid rgba(255,255,255,.55); border-radius: 3px; padding: 12px 14px;
+  }
+  .form textarea { resize: vertical; min-height: 150px; }
+  .form input:focus, .form textarea:focus { outline: 3px solid var(--amber); outline-offset: 1px; border-color: var(--amber); }
+  .form .btn { margin-top: 22px; }
+  .form .btn[disabled] { opacity: .6; cursor: progress; }
+  .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+  .contact .form-note { min-height: 1.7em; margin: 14px 0 0; font-size: 15px; max-width: none; }
+  .contact .form-note.ok { color: var(--amber); }
+  .contact .form-note.err { color: #ffd9d3; }
+  .contact .form-note a { color: #fff; }
+  .foot { margin-top: 88px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.35); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 14px; color: rgba(255,255,255,.8); }
+  .contact .foot p { margin: 0; font-size: 14px; color: inherit; }
+</style>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="mark" href="#top" aria-label="Deepak Gupta, back to top">DG</a>
+    <nav aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-resume" href="/Deepak_Gupta_Resume.pdf" download="Deepak_Gupta_Resume.pdf">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <h1><span>Deepak</span><span>Gupta</span></h1>
+        <p class="lede">Full stack developer at LTIMindtree. I build secure APIs and event-driven backends with Java, Spring Boot and Kafka, plus the Angular screens on top.</p>
+        <div class="cta">
+          <a class="btn btn-amber" href="/Deepak_Gupta_Resume.pdf" download="Deepak_Gupta_Resume.pdf">Download resume</a>
+          <a class="btn btn-line" href="#projects">See my projects</a>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-bar">
+          <p class="stage-title">How a booking moves through EventHub<small>My ticket-booking backend. Send an event through it.</small></p>
+          <div class="stage-actions">
+            <button class="btn btn-amber" id="btn-confirm" type="button">Book a seat</button>
+            <button class="btn btn-line" id="btn-expire" type="button">Let a hold expire</button>
+          </div>
+        </div>
+
+        <div class="diagram-scroll">
+          <svg id="diagram" class="dgm dw" viewBox="0 0 760 410" role="img" aria-labelledby="dtitle ddesc">
+            <title id="dtitle">EventHub service architecture</title>
+            <desc id="ddesc">A client calls an API gateway. Behind it sit the Auth, Booking and Event services. Booking keeps seat holds in Redis and publishes events to a Kafka topic, which the Notification service consumes.</desc>
+
+            <g id="edges">
+              <path id="e-gw-auth" class="edge" d="M268 198H304V60H340"/>
+              <path id="e-gw-event" class="edge" d="M268 198H304V336H340"/>
+              <path id="e-client-gw" class="edge" d="M104 198H156"/>
+              <path id="e-gw-booking" class="edge" d="M268 198H340"/>
+              <path id="e-booking-event" class="edge" d="M398 224V310"/>
+              <path id="e-booking-redis" class="edge" d="M440 172V118H618V86"/>
+              <path id="e-booking-kafka" class="edge" d="M456 198H528"/>
+              <path id="e-kafka-notif" class="edge" d="M618 224V310"/>
+            </g>
+
+            <text class="elabel" x="410" y="272">Feign</text>
+            <text class="elabel" x="470" y="110">seat hold: lock + TTL</text>
+            <text class="elabel" x="464" y="190">publishes</text>
+            <text class="elabel" x="630" y="272">consumes</text>
+
+            <g class="node" id="n-client">
+              <rect x="8" y="172" width="96" height="52" rx="3"/>
+              <text class="nl" x="56" y="203" text-anchor="middle">Client</text>
+            </g>
+            <g class="node planned" id="n-gateway">
+              <rect x="156" y="172" width="112" height="52" rx="3"/>
+              <text class="nl" x="212" y="195" text-anchor="middle">API Gateway</text>
+              <text class="ns" x="212" y="212" text-anchor="middle">:8080</text>
+            </g>
+            <g class="node" id="n-auth">
+              <rect x="340" y="34" width="116" height="52" rx="3"/>
+              <text class="nl" x="398" y="57" text-anchor="middle">Auth</text>
+              <text class="ns" x="398" y="74" text-anchor="middle">:8082</text>
+            </g>
+            <g class="node" id="n-booking">
+              <rect x="340" y="172" width="116" height="52" rx="3"/>
+              <text class="nl" x="398" y="195" text-anchor="middle">Booking</text>
+              <text class="ns" x="398" y="212" text-anchor="middle">:8083</text>
+            </g>
+            <g class="node" id="n-event">
+              <rect x="340" y="310" width="116" height="52" rx="3"/>
+              <text class="nl" x="398" y="333" text-anchor="middle">Event</text>
+              <text class="ns" x="398" y="350" text-anchor="middle">:8081</text>
+            </g>
+            <g class="node" id="n-redis">
+              <rect x="560" y="34" width="116" height="52" rx="26"/>
+              <text class="nl" x="618" y="57" text-anchor="middle">Redis</text>
+              <text class="ns" x="618" y="74" text-anchor="middle">seat holds</text>
+            </g>
+            <g class="node" id="n-kafka">
+              <rect x="528" y="172" width="180" height="52" rx="26"/>
+              <text class="nl" x="618" y="195" text-anchor="middle">Kafka</text>
+              <text class="ns" x="618" y="212" text-anchor="middle">booking-events</text>
+            </g>
+            <g class="node" id="n-notif">
+              <rect x="528" y="310" width="180" height="52" rx="3"/>
+              <text class="nl" x="618" y="333" text-anchor="middle">Notification</text>
+              <text class="ns" x="618" y="350" text-anchor="middle">:8084</text>
+            </g>
+
+            <circle id="packet" class="packet" r="6" cx="0" cy="0"/>
+          </svg>
+
+          <svg id="diagram-m" class="dgm dn" viewBox="0 0 360 470" role="img" aria-label="EventHub service architecture, shown as a vertical flow from client through gateway, booking and Kafka to the notification service, with Auth, Event and Redis beside it.">
+            <g>
+              <path id="e-client-gw-m" class="edge" d="M180 60V100"/>
+              <path id="e-gw-auth-m" class="edge" d="M130 125H92"/>
+              <path id="e-gw-booking-m" class="edge" d="M180 150V200"/>
+              <path id="e-booking-event-m" class="edge" d="M130 225H92"/>
+              <path id="e-booking-redis-m" class="edge" d="M230 225H268"/>
+              <path id="e-booking-kafka-m" class="edge" d="M180 250V300"/>
+              <path id="e-kafka-notif-m" class="edge" d="M180 350V400"/>
+            </g>
+            <text class="elabel" x="111" y="244" text-anchor="middle">Feign</text>
+            <text class="elabel" x="310" y="268" text-anchor="middle">lock + TTL</text>
+            <text class="elabel" x="190" y="280">publishes</text>
+            <text class="elabel" x="190" y="380">consumes</text>
+
+            <g class="node" id="n-client-m"><rect x="130" y="10" width="100" height="50" rx="3"/><text class="nl" x="180" y="40" text-anchor="middle">Client</text></g>
+            <g class="node planned" id="n-gateway-m"><rect x="130" y="100" width="100" height="50" rx="3"/><text class="nl" x="180" y="123" text-anchor="middle">API Gateway</text><text class="ns" x="180" y="140" text-anchor="middle">:8080</text></g>
+            <g class="node" id="n-auth-m"><rect x="8" y="100" width="84" height="50" rx="3"/><text class="nl" x="50" y="123" text-anchor="middle">Auth</text><text class="ns" x="50" y="140" text-anchor="middle">:8082</text></g>
+            <g class="node" id="n-booking-m"><rect x="130" y="200" width="100" height="50" rx="3"/><text class="nl" x="180" y="223" text-anchor="middle">Booking</text><text class="ns" x="180" y="240" text-anchor="middle">:8083</text></g>
+            <g class="node" id="n-event-m"><rect x="8" y="200" width="84" height="50" rx="3"/><text class="nl" x="50" y="223" text-anchor="middle">Event</text><text class="ns" x="50" y="240" text-anchor="middle">:8081</text></g>
+            <g class="node" id="n-redis-m"><rect x="268" y="200" width="84" height="50" rx="25"/><text class="nl" x="310" y="223" text-anchor="middle">Redis</text><text class="ns" x="310" y="240" text-anchor="middle">holds</text></g>
+            <g class="node" id="n-kafka-m"><rect x="120" y="300" width="120" height="50" rx="25"/><text class="nl" x="180" y="323" text-anchor="middle">Kafka</text><text class="ns" x="180" y="340" text-anchor="middle">booking-events</text></g>
+            <g class="node" id="n-notif-m"><rect x="120" y="400" width="120" height="50" rx="3"/><text class="nl" x="180" y="423" text-anchor="middle">Notification</text><text class="ns" x="180" y="440" text-anchor="middle">:8084</text></g>
+
+            <circle id="packet-m" class="packet" r="6" cx="0" cy="0"/>
+          </svg>
+        </div>
+
+        <ol class="log" id="log" aria-live="polite" aria-label="Event log"></ol>
+
+        <p class="legend">
+          <span><i class="key solid"></i>Service, built</span>
+          <span><i class="key dashed"></i>Service, in progress</span>
+          <span><i class="key pill"></i>Infrastructure</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="block" id="about">
+    <div class="wrap split">
+      <h2>I lean backend and build the whole stack.</h2>
+      <div class="about-copy">
+        <p>I'm a full stack developer at LTIMindtree in Pune, with more than two years on an enterprise banking CRM for HSBC. My days go to secure REST APIs in Java and Spring Boot, event-driven services on Kafka, and the Angular screens that sit on top of them.</p>
+        <p>I care about clean architecture, automated delivery and code quality, and I take features from design to production inside Agile teams. Outside work I'm building EventHub, a ticket-booking system, to go deeper on distributed backends.</p>
+
+        <dl class="stack">
+          <div><dt>Languages</dt><dd>Java, SQL, TypeScript, JavaScript (React.js), HTML</dd></div>
+          <div><dt>Frameworks</dt><dd>Spring Boot, Spring JPA, Angular, Node.js, JWT</dd></div>
+          <div><dt>Data</dt><dd>MySQL, MongoDB, JDBC</dd></div>
+          <div><dt>Architecture</dt><dd>RESTful APIs, Microservices, Apache Kafka, Eureka Server</dd></div>
+          <div><dt>Delivery</dt><dd>Docker, Jenkins, SonarQube, Git, SDLC</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="block band" id="experience">
+    <div class="wrap">
+      <h2 style="margin-bottom:56px">Experience</h2>
+
+      <div class="split">
+        <div class="role">
+          <h3>LTIMindtree</h3>
+          <p class="where">Software Engineer, Full Stack</p>
+          <p>Apr 2024 to present</p>
+          <p>Pune, India</p>
+        </div>
+        <ul class="work">
+          <li>
+            <strong>Secure APIs for a banking CRM</strong>
+            <p>Built 10+ RESTful APIs in Java and Spring Boot with JWT authentication, protecting sensitive financial data across HSBC's CRM workflows. Query optimisation and caching cut average response time by 30%.</p>
+          </li>
+          <li>
+            <strong>Event-driven microservices</strong>
+            <p>Designed a microservices backend on Spring Boot and Apache Kafka for asynchronous event streaming, so services stay decoupled, scale horizontally and tolerate failure.</p>
+          </li>
+          <li>
+            <strong>Full stack delivery</strong>
+            <p>Shipped end-to-end features across Java, Spring Boot, Angular and SQL for secure financial operations and regulatory compliance workflows.</p>
+          </li>
+          <li>
+            <strong>Automated releases and code quality</strong>
+            <p>Automated CI/CD pipelines in Jenkins to deploy more often with less manual effort, and used SonarQube quality gates to keep technical debt falling release after release.</p>
+          </li>
+          <li>
+            <strong>Working with the team</strong>
+            <p>Worked with QA, DevOps and business analysts in Agile (Scrum) teams, owning features, bug triage and production issues. Brought AI-powered development tools into the lifecycle to speed up API design, backend logic and frontend components.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="earlier">
+        <h3>Before that</h3>
+        <div class="rows">
+          <div class="row">
+            <div>
+              <h4>Full Stack Java Developer Intern</h4>
+              <p class="meta">LTIMindtree, Feb to Apr 2023, remote</p>
+            </div>
+            <p>Built a full-stack application with Core Java, Spring Boot and Angular/React: REST APIs, business logic and responsive UI, taken through integration, testing and deployment.</p>
+          </div>
+          <div class="row">
+            <div>
+              <h4>Machine Learning and AI training</h4>
+              <p class="meta">Knowledge Solutions India, Jun to Aug 2021, Mumbai</p>
+            </div>
+            <p>Covered data preprocessing, model training and evaluation, and built two end-to-end predictive projects: House Price Prediction and Heart Disease Prediction.</p>
+          </div>
+          <div class="row">
+            <div>
+              <h4>Bachelor of Engineering</h4>
+              <p class="meta">Terna Engineering College, Aug 2019 to Jul 2023, Navi Mumbai</p>
+            </div>
+            <p>CGPA 7.95.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="projects-head">
+        <h2>Projects</h2>
+      </div>
+
+      <!-- EventHub -->
+      <article class="project split">
+        <div>
+          <h3>EventHub</h3>
+          <p class="sub">Real-time ticket booking system</p>
+          <p class="status"><i aria-hidden="true"></i>In progress: four of five services built</p>
+        </div>
+        <div>
+          <p class="lead">A BookMyShow-style backend that I'm building to practise the problems that break booking systems: two people wanting the same seat, and holds that must expire.</p>
+
+          <ul class="services">
+            <li><i aria-hidden="true"></i><b>Event Service <code>:8081</code></b><span><span class="sr">Built. </span>Event data, queried by Booking through Feign.</span></li>
+            <li><i aria-hidden="true"></i><b>Auth Service <code>:8082</code></b><span><span class="sr">Built. </span>Issues JWTs carrying userId, role, sub, iat and exp.</span></li>
+            <li><i aria-hidden="true"></i><b>Booking Service <code>:8083</code></b><span><span class="sr">Built. </span>Holds seats with Redisson distributed locks and a Redis TTL, then publishes BOOKING_CONFIRMED or BOOKING_EXPIRED to Kafka.</span></li>
+            <li><i aria-hidden="true"></i><b>Notification Service <code>:8084</code></b><span><span class="sr">Built. </span>Consumes booking-events with a Kafka listener and logs mock notifications.</span></li>
+            <li><i class="todo" aria-hidden="true"></i><b>API Gateway <code>:8080</code></b><span><span class="sr">In progress. </span>Next up: one entry point for every request.</span></li>
+          </ul>
+
+          <p class="tech"><b>Built with</b> Java 17, Spring Boot 4.1, Maven, MySQL, Redis (Redisson), Apache Kafka, OpenFeign. <b>Planned</b> Resilience4j circuit breakers, Docker Compose, Prometheus and Grafana.</p>
+        </div>
+      </article>
+
+      <!-- V&F Basket -->
+      <article class="project split">
+        <div>
+          <h3>V&amp;F Basket</h3>
+          <p class="sub">Full-stack e-commerce application</p>
+          <a class="plink" href="https://github.com/deepak0103gupta/V-F-Basket" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <div>
+          <p class="lead">A shopping app with a Spring Boot REST API and an Angular frontend.</p>
+          <ul class="points">
+            <li><b>40+ endpoints</b> across users, products, categories, cart, orders, payments, reviews and addresses, secured with stateless JWT authentication.</li>
+            <li><b>Cart to order.</b> Placing an order validates the cart, checks and reserves stock, and moves the order and payment through their status lifecycles. A webhook handles payment callbacks.</li>
+            <li><b>Angular 21 frontend</b> with Angular Material for browsing by category, login and registration, product add and edit with image upload, and account and address management.</li>
+          </ul>
+          <p class="tech"><b>Built with</b> Java 17, Spring Boot, Spring Security, JWT, Spring Data JPA, MySQL, Angular 21, Angular Material.</p>
+        </div>
+      </article>
+
+      <!-- Earlier -->
+      <div class="project split" style="padding-bottom:0">
+        <div>
+          <h3 style="font-size:28px">Earlier work</h3>
+        </div>
+        <div class="rows" style="border-top:0">
+          <div class="row" style="grid-template-columns:minmax(0,1fr);gap:4px;padding-top:0"><h4>E-Learning Platform</h4><p class="meta">Angular, Spring Boot, Java, MySQL. Course management, user authentication and progress tracking.</p></div>
+          <div class="row" style="grid-template-columns:minmax(0,1fr);gap:4px"><h4>Heart Disease Prediction</h4><p class="meta">Logistic regression to predict the presence of heart disease from patient data.</p></div>
+          <div class="row" style="grid-template-columns:minmax(0,1fr);gap:4px"><h4>House Price Prediction</h4><p class="meta">Predictive model built end to end, from preprocessing to evaluation.</p></div>
+          <div class="row" style="grid-template-columns:minmax(0,1fr);gap:4px"><h4>Shopping website</h4><p class="meta">React and Tailwind CSS. Product catalogue, shopping cart and checkout.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <h2>Let's talk.</h2>
+          <p>I'm happy to talk about backend engineering, microservices, or a role that needs someone who can own a feature end to end. Send a message and I'll reply by email.</p>
+
+          <dl class="reach">
+            <div><dt>Email</dt><dd><a href="mailto:deepak0103gupta@gmail.com">deepak0103gupta@gmail.com</a></dd><dd><button class="linkbtn" type="button" data-copy="deepak0103gupta@gmail.com">Copy</button></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+919324071256">+91 9324071256</a></dd><dd><button class="linkbtn" type="button" data-copy="+91 9324071256">Copy</button></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/deepak0103/" target="_blank" rel="noopener">linkedin.com/in/deepak0103</a></dd><dd></dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/deepak0103gupta" target="_blank" rel="noopener">github.com/deepak0103gupta</a></dd><dd></dd></div>
+            <div><dt>Based in</dt><dd>Pune, India</dd><dd></dd></div>
+          </dl>
+
+          <div class="cta">
+            <a class="btn btn-amber" href="/Deepak_Gupta_Resume.pdf" download="Deepak_Gupta_Resume.pdf">Download resume</a>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <h3>Send a message</h3>
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+          <label for="f-email">Your email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required>
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" rows="6" maxlength="5000" required></textarea>
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-amber" id="f-send" type="submit">Send message</button>
+          <p class="form-note" id="form-note" role="status"></p>
+        </form>
+      </div>
+
+      <div class="foot">
+        <p>Deepak Gupta, Pune, India</p>
+        <p>Built with HTML, CSS and a little JavaScript.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Sticky nav colour ---------- */
+  var nav = document.getElementById("nav");
+  var hero = document.getElementById("top");
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      nav.classList.toggle("solid", !entries[0].isIntersecting);
+    }, { rootMargin: "-68px 0px 0px 0px", threshold: 0 }).observe(hero);
+  }
+
+  /* ---------- EventHub event-flow diagram ---------- */
+  var narrowMQ = window.matchMedia("(max-width: 640px)");
+  var log = document.getElementById("log");
+  var btnConfirm = document.getElementById("btn-confirm");
+  var btnExpire = document.getElementById("btn-expire");
+
+  /* Two drawings share one script: the wide one and a vertical one for phones (ids end in -m). */
+  function pick(id) { return document.getElementById(narrowMQ.matches ? id + "-m" : id); }
+  function edge(id) { return pick(id); }
+  function node(id) { return pick(id); }
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  function travel(path, reverse, dur) {
+    return new Promise(function (resolve) {
+      if (reduce) { resolve(); return; }
+      var packet = pick("packet");
+      var len = path.getTotalLength();
+      var t0 = null;
+      packet.style.opacity = 1;
+      function frame(now) {
+        if (t0 === null) t0 = now;
+        var p = Math.min(1, (now - t0) / dur);
+        var e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        var d = reverse ? len * (1 - e) : len * e;
+        var pt = path.getPointAtLength(d);
+        packet.setAttribute("cx", pt.x);
+        packet.setAttribute("cy", pt.y);
+        if (p < 1) { requestAnimationFrame(frame); }
+        else { packet.style.opacity = 0; resolve(); }
+      }
+      requestAnimationFrame(frame);
+    });
+  }
+
+  function addLog(svc, msg) {
+    var li = document.createElement("li");
+    var a = document.createElement("span"); a.className = "svc"; a.textContent = svc;
+    var b = document.createElement("span"); b.className = "msg"; b.textContent = msg;
+    li.appendChild(a); li.appendChild(b);
+    log.appendChild(li);
+  }
+
+  function setIdle() {
+    log.innerHTML = "";
+    var li = document.createElement("li");
+    var s = document.createElement("span"); s.className = "idle";
+    s.textContent = "Waiting for an event. Press a button above.";
+    li.style.display = "block";
+    li.appendChild(s);
+    log.appendChild(li);
+  }
+
+  var scenarios = {
+    confirm: [
+      { edge: "e-client-gw", node: "n-gateway", svc: "gateway", msg: "POST /bookings arrives with a JWT." },
+      { node: "n-auth", svc: "auth", msg: "Auth Service issued that token at login: userId, role, sub, iat, exp." },
+      { edge: "e-gw-booking", node: "n-booking", svc: "booking", msg: "The request is routed to Booking Service." },
+      { edge: "e-booking-event", node: "n-event", svc: "event", msg: "Booking asks Event Service through Feign whether the seat is free.", back: true },
+      { edge: "e-booking-redis", node: "n-redis", svc: "redis", msg: "Booking holds the seat with a Redisson lock and a TTL." },
+      { edge: "e-booking-kafka", node: "n-kafka", svc: "kafka", msg: "Booking publishes BOOKING_CONFIRMED to booking-events." },
+      { edge: "e-kafka-notif", node: "n-notif", svc: "notification", msg: "Notification Service consumes the event and logs a message." }
+    ],
+    expire: [
+      { edge: "e-booking-redis", node: "n-redis", svc: "redis", msg: "A seat hold sits in Redis with a TTL." },
+      { edge: "e-booking-redis", reverse: true, node: "n-booking", svc: "booking", msg: "The TTL runs out and the hold expires." },
+      { edge: "e-booking-kafka", node: "n-kafka", svc: "kafka", msg: "Booking publishes BOOKING_EXPIRED to booking-events." },
+      { edge: "e-kafka-notif", node: "n-notif", svc: "notification", msg: "Notification Service consumes the event and logs a message." }
+    ]
+  };
+
+  var running = false;
+  function setBusy(b) {
+    running = b;
+    btnConfirm.disabled = b;
+    btnExpire.disabled = b;
+  }
+
+  async function run(name) {
+    if (running) return;
+    setBusy(true);
+    log.innerHTML = "";
+    var steps = scenarios[name];
+    for (var i = 0; i < steps.length; i++) {
+      var s = steps[i];
+      var e = s.edge ? edge(s.edge) : null;
+      if (e) {
+        e.classList.add("live");
+        e.parentNode.appendChild(e);
+        await travel(e, !!s.reverse, 720);
+        if (s.back) { await travel(e, !s.reverse, 560); }
+      }
+      var n = node(s.node);
+      n.classList.add("active");
+      addLog(s.svc, s.msg);
+      await sleep(reduce ? 320 : 520);
+      n.classList.remove("active");
+      if (e) e.classList.remove("live");
+    }
+    setBusy(false);
+  }
+
+  btnConfirm.addEventListener("click", function () { run("confirm"); });
+  btnExpire.addEventListener("click", function () { run("expire"); });
+
+  setIdle();
+  setTimeout(function () { run("confirm"); }, reduce ? 200 : 1100);
+
+  /* ---------- Copy buttons ---------- */
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy");
+      var label = btn.textContent;
+      function done(msg) {
+        btn.textContent = msg;
+        setTimeout(function () { btn.textContent = label; }, 1800);
+      }
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { done("Copied"); }, function () { done("Copy failed"); });
+        } else { done("Copy failed"); }
+      } catch (err) { done("Copy failed"); }
+    });
+  });
+
+  /* ---------- Contact form ---------- */
+  var form = document.getElementById("contact-form");
+  var formNote = document.getElementById("form-note");
+  var sendBtn = document.getElementById("f-send");
+  var openedAt = Date.now();
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function say(kind, text, withMailLink) {
+    formNote.className = "form-note " + kind;
+    formNote.textContent = text;
+    if (withMailLink) {
+      formNote.appendChild(document.createTextNode(" Please email me directly at "));
+      var a = document.createElement("a");
+      a.href = "mailto:deepak0103gupta@gmail.com";
+      a.textContent = "deepak0103gupta@gmail.com";
+      formNote.appendChild(a);
+      formNote.appendChild(document.createTextNode("."));
+    }
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var name = form.elements.name.value.trim();
+    var email = form.elements.email.value.trim();
+    var message = form.elements.message.value.trim();
+
+    if (!name) { say("err", "Please enter your name."); form.elements.name.focus(); return; }
+    if (!EMAIL_RE.test(email)) { say("err", "Please enter a valid email address."); form.elements.email.focus(); return; }
+    if (message.length < 10) { say("err", "Please write a message of at least 10 characters."); form.elements.message.focus(); return; }
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Sending";
+    say("", "");
+    try {
+      var res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name, email: email, message: message,
+          company: form.elements.company.value,
+          elapsed: Date.now() - openedAt
+        })
+      });
+      var data = null;
+      try { data = await res.json(); } catch (err) { data = null; }
+      if (res.ok && data && data.ok) {
+        form.reset();
+        say("ok", "Thanks, " + name.split(" ")[0] + ". Your message is on its way and I'll reply by email.");
+      } else if (data && data.error && res.status >= 400 && res.status < 500) {
+        say("err", data.error);
+      } else {
+        say("err", "Sorry, your message could not be sent.", true);
+      }
+    } catch (err) {
+      say("err", "Sorry, your message could not be sent.", true);
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Send message";
+    }
+  });
+
+  /* ---------- Highlight the current section in the nav ---------- */
+  if ("IntersectionObserver" in window) {
+    var navLinks = {};
+    document.querySelectorAll('.nav nav a[href^="#"]').forEach(function (a) {
+      navLinks[a.getAttribute("href").slice(1)] = a;
+    });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting || !navLinks[en.target.id]) return;
+        Object.keys(navLinks).forEach(function (k) { navLinks[k].removeAttribute("aria-current"); });
+        navLinks[en.target.id].setAttribute("aria-current", "true");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(navLinks).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) spy.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>

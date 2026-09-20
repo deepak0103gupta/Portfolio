@@ -1,0 +1,6 @@
+{
+  "name": "deepak-gupta-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio site for Deepak Gupta: static page plus a serverless contact endpoint."
+}
